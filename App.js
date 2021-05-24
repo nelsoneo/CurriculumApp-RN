@@ -25,8 +25,8 @@ const App = () => {
 
   return (
     <>
-      <View style={styles.container}>
-        <View style = {styles.cabecalhoContainer}> 
+      <View style = {styles.cabecalhoContainer} >
+        <View > 
             <Image source={foto} style = {styles.fotoStyle}/>
             <Text style = {styles.nome}>NELSON H GUERRA</Text>
             <Text style = {styles.cargo}>Desenvolvedor Mobile</Text>
@@ -45,24 +45,27 @@ const App = () => {
         {/* <StatusBar style="auto" /> */}
     </View>
 
-    <Card titulo = 'Formação Academica'/>
-    <Card titulo = 'Experiencias Professional'/>
+    <Card titulo = 'Formação Academica'>
+          <Text >React-Native</Text>
+          <Text>JavaScript</Text>
+          <Text>Java</Text>
+          <Text>C#</Text>
+          <Text>Genexus</Text>
+    </Card>
+    <Card titulo = 'Experiencias Professional'>
+          <Text>Engenhiero em Ciencias da Computação</Text>
+    </Card>
     </>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-/*     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center', */
-  },
   cabecalhoContainer: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-start',
-    paddingTop: 35
+    marginTop: 35,
+    marginBottom: '40%'
   },
   fotoStyle: {
     width: 250,
@@ -81,7 +84,7 @@ const styles = StyleSheet.create({
   redesSociais: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    width: '50%',
+    // width: '50%',
     marginTop: 10
   },
 });
