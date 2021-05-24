@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, Alert, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import foto from './assets/perfil.jpg';
+import Card from './src/Components/Card/Card';
 
 const App = () => {
 
@@ -38,26 +39,14 @@ const App = () => {
                 </TouchableOpacity>
                 <TouchableOpacity onPress = {() => RedesSocias('Linkedin')}>
                   <Icon name = 'linkedin-square' style={{fontSize: 20}} />
-                </TouchableOpacity>
-            </View>
-
-            <View style = {styles.card}>
-              <View>
-                <Text style= {{fontSize: 18, fontWeight: 'bold', alignSelf: 'center'}}>Experiencia Professional</Text>
-                <Text >React-Native</Text>
-                <Text>JavaScript</Text>
-                <Text>Java</Text>
-                <Text>C#</Text>
-                <Text>Genexus</Text>
-              </View>
-              <View style = {styles.card_content}>
-                <Text style= {{fontSize: 18, fontWeight: 'bold', alignSelf: 'center'}}>Formação Academica</Text>
-                <Text>Engenhiero em Ciencias da Computação</Text>
-              </View>
+                </TouchableOpacity> 
             </View>
         </View>
         {/* <StatusBar style="auto" /> */}
     </View>
+
+    <Card titulo = 'Formação Academica'/>
+    <Card titulo = 'Experiencias Professional'/>
     </>
   );
 };
@@ -95,19 +84,6 @@ const styles = StyleSheet.create({
     width: '50%',
     marginTop: 10
   },
-  card: {
-    width: '99%',
-    flex: 1,
-    borderRadius: 5,
-    borderWidth: 2,
-    borderColor: '#933939',
-    marginTop: 20,
-    // alignItems: 'center'
-  },
-  card_content: {
-    alignItems: 'flex-start',
-    marginTop: 10
-  }
 });
 
 export default App;
